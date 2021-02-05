@@ -1,0 +1,9 @@
+.modalActions {
+    justify-content: center;
+    padding-bottom: 20px;
+
+
+}
+.modalActions .actionButton {
+    padding-left: 15px;
+}

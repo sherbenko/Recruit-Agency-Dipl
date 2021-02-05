@@ -1,0 +1,26 @@
+.mainFeature {
+    position: relative;
+    margin-bottom: 32px;
+    background-position: center;
+    background-repeat:no-repeat ;
+    background-size: cover;
+
+}
+.mainFeaturePostContent{
+    position: relative;
+    padding: 58px;
+}
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, .3);
+}
+.media {
+    padding-top: 56.25%;
+}
+.cardGrid {
+    padding-top: 30px;
+}
