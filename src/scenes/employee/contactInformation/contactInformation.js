@@ -1,5 +1,5 @@
 import React from "react";
-import {Grid, makeStyles, Paper, TextField} from "@material-ui/core";
+import {Checkbox, FormControlLabel, Grid, makeStyles, Paper, TextField} from "@material-ui/core";
 import Typography from "@material-ui/core/Typography";
 
 const useStyles = makeStyles((theme) => ({
@@ -40,7 +40,7 @@ const ContactInformation = () => {
   return (
     <>
       <Typography gutterBottom variant="h5" component="h2" className={classes.sectionName}>
-        Lizard
+        Personal Information
       </Typography>
       <Paper elevation={3} >
         <div className={classes.contactInformationTitle}>Contact Information</div>
@@ -49,7 +49,7 @@ const ContactInformation = () => {
           <TextField fullWidth required id="name" label="first name" defaultValue="ILya"/>
         </Grid>
         <Grid item xs={12} sm={3} md={3} className={classes.textInput}>
-          <TextField fullWidth required id="surname" label="lst name" defaultValue="Sherbenko"/>
+          <TextField fullWidth required id="surname" label="last name" defaultValue="Sherbenko"/>
         </Grid>
         <Grid item xs={12} sm={4} md={5} className={classes.textInput}>
           <TextField fullWidth required id="address" label="street address" defaultValue="Ulyanovskaya"/>
@@ -57,32 +57,45 @@ const ContactInformation = () => {
         </div>
 
         <div className={classes.contactInformation}>
-        <Grid item xs={12} sm={4} md={5} className={classes.textInput}>
+        <Grid item xs={12} sm={3} md={3} className={classes.textInput}>
           <TextField fullWidth required id="email" type="email" label="email" defaultValue="ilyaSherbenko@mail.ru"/>
         </Grid>
         <Grid item xs={12} sm={3} md={3} className={classes.textInput}>
           <TextField fullWidth required  label="mobile phone" defaultValue="+375333333"/>
         </Grid>
-        <Grid item xs={12} sm={3} md={3} className={classes.textInput}>
-          <TextField fullWidth required  label="city" defaultValue="Mozyr"/>
-        </Grid>
-        </div>
-
-        <div className={classes.contactInformation}>
         <Grid item xs={12} sm={4} md={5} className={classes.textInput}>
           <TextField fullWidth required  label="city" defaultValue="Mozyr"/>
         </Grid>
-        <Grid item xs={12} sm={3} md={3} className={classes.textInput}>
-          <TextField fullWidth required  type="email" label="email" defaultValue="ilyaSherbenko@mail.ru"/>
-        </Grid>
-        <Grid item xs={12} sm={3} md={3} className={classes.textInput}>
-          <TextField fullWidth required  label="mobile phone" defaultValue="+375333333"/>
-        </Grid>
         </div>
 
+        <div className={classes.contactInformationTitle}>Gender</div>
+        <div className={classes.contactInformation}>
 
-
+          <FormControlLabel
+              control={
+                <Checkbox
+                    checked={true}
+                    // onChange={handleChange}
+                    name="checkedB"
+                    color="primary"
+                />
+              }
+              label="Male"
+          />
+          <FormControlLabel
+              control={
+                <Checkbox
+                    checked={false}
+                    // onChange={handleChange}
+                    name="checkedB"
+                    color="primary"
+                />
+              }
+              label="Female"
+          />
+        </div>
       </Paper>
+
     </>
   )
 

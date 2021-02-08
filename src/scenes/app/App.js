@@ -11,6 +11,7 @@ import SideBar from "./sidebar/sideBar";
 function App() {
   const [open, setOpen] = useState(false)
   const [isSidebarOpen,setIsSideBarOpen] = useState(false)
+
   const toggleModal = () => {
     setOpen(!open);
   }

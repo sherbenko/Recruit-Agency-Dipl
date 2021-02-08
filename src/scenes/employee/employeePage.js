@@ -6,6 +6,8 @@ import {
 
 import ContactInformation from "./contactInformation/contactInformation";
 import ProfileHeader from "./profileHeader/profileHeader";
+import SkillInformation from "./skillInformation/skillInformation";
+import EmploymentPreferences from "./employmentPreferences/employmentPreferences";
 
 const useStyles = makeStyles((theme) => ({
   wrapper: {
@@ -15,7 +17,10 @@ const useStyles = makeStyles((theme) => ({
         width: '95%',
         padding:'5px 7px 5px'
 },
-
+    [theme.breakpoints.between('xs','sm')]: {
+      width: '95%',
+      padding:'5px 0px 5px'
+    },
   }
 }));
 
@@ -27,6 +32,8 @@ const EmployeePage = () => {
       <Grid container>
         <Grid item xs={12} md={12}>
           <ContactInformation/>
+          <SkillInformation/>
+          <EmploymentPreferences/>
         </Grid>
       </Grid>
 
