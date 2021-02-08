@@ -54,9 +54,9 @@ const ProfileHeader = () => {
                 Lizard
               </Typography>
               <Typography variant="body2" color="textSecondary" component="p">
-                Lizards are a widespread group of squamate reptiles, with over 6,000 species, ranging
-                across all continents except Antarctica
+                The more you complete your profile, the more companies will find you! Improve your profile by adding your <b>personal information</b>.
               </Typography>
+
             </div>
           </Paper>
         </Grid>

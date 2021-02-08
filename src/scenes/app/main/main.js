@@ -13,58 +13,59 @@ import {
 import FavoriteIcon from '@material-ui/icons/Favorite';
 import ShareIcon from '@material-ui/icons/Share';
 import './main.styles.css'
+
 const Main = () => {
   return (
     <main>
-    <Paper className="mainFeature"
-      style={{backgroundImage: `url(https://source.unsplash.com/random)`}}>
-      <Container fixed>
-        <div className={"overlay"}/>
-        <Grid container>
-          <Grid item md={6}>
-            <div className={"mainFeaturePostContent"}>
-              <Typography component={"h1"}
-                          variant={"h3"}
-                          color={"inherit"}
-                          gutterBottom>
-                Find job
-              </Typography>
-              <Typography
-                component={"h5"}
-                color={"inherit"}
-                paragraph>
-                React js стала революционной библиотекой в мире Frontend разработки. Для того что б стать junior
-                javascript разработчиком одно из требований знание данной библиотеки и умение верстать сайты. В этом
-                видео я на практике покажу как происходит верстка сайта
-              </Typography>
-              <Button variant={"contained"} color={"secondary"}>Find</Button>
-            </div>
+      <Paper className="mainFeature"
+             style={{backgroundImage: `url(https://source.unsplash.com/random)`}}>
+        <Container fixed>
+          <div className={"overlay"}/>
+          <Grid container>
+            <Grid item md={6}>
+              <div className={"mainFeaturePostContent"}>
+                <Typography component={"h1"}
+                            variant={"h3"}
+                            color={"inherit"}
+                            gutterBottom>
+                  Find job
+                </Typography>
+                <Typography
+                  component={"h5"}
+                  color={"inherit"}
+                  paragraph>
+                  React js стала революционной библиотекой в мире Frontend разработки. Для того что б стать junior
+                  javascript разработчиком одно из требований знание данной библиотеки и умение верстать сайты. В этом
+                  видео я на практике покажу как происходит верстка сайта
+                </Typography>
+                <Button variant={"contained"} color={"secondary"}>Find</Button>
+              </div>
+            </Grid>
           </Grid>
-        </Grid>
-      </Container>
-    </Paper>
-    <div className={"mainContent"}>
-      <Container maxWidth={"md"}>
-        <Typography variant={"h2"} align={"center"} color={"textPrimary"} gutterBottom>
-          Actual Jobs
-        </Typography>
-        <Typography variant={"h5"} align={"center"} color={"textSecondary"} paragraph>
-          React js стала революционной библиотекой в мире Frontend разработки. Для того что б стать junior
-          javascript разработчиком одно из требований знание данной библиотеки и умение верстать сайты. В этом
-          видео я на практике покажу как происходит верстка сайта
-        </Typography>
-      <div className={"mainButtons"}>
-        <Grid container spacing={5} justify={"center"}>
-          <Grid item>
-            <Button variant={"contained"} color={"primary"}>Active</Button>
-          </Grid>
-          <Grid item>
-            <Button variant={"outlined"} color={"primary"}>Active</Button>
-          </Grid>
-        </Grid>
+        </Container>
+      </Paper>
+      <div className={"mainContent"}>
+        <Container maxWidth={"md"}>
+          <Typography variant={"h2"} align={"center"} color={"textPrimary"} gutterBottom>
+            Actual Jobs
+          </Typography>
+          <Typography variant={"h5"} align={"center"} color={"textSecondary"} paragraph>
+            React js стала революционной библиотекой в мире Frontend разработки. Для того что б стать junior
+            javascript разработчиком одно из требований знание данной библиотеки и умение верстать сайты. В этом
+            видео я на практике покажу как происходит верстка сайта
+          </Typography>
+          <div className={"mainButtons"}>
+            <Grid container spacing={5} justify={"center"}>
+              <Grid item>
+                <Button variant={"contained"} color={"primary"}>Active</Button>
+              </Grid>
+              <Grid item>
+                <Button variant={"outlined"} color={"primary"}>Active</Button>
+              </Grid>
+            </Grid>
+          </div>
+        </Container>
       </div>
-      </Container>
-    </div>
       <Container className={"cardGrid"}>
         <Grid container spacing={3}>
           {[1, 2, 3, 4, 5, 6].map((item) => (
@@ -88,10 +89,10 @@ const Main = () => {
                 </CardActionArea>
                 <CardActions disableSpacing>
                   <IconButton aria-label="add to favorites">
-                    <FavoriteIcon />
+                    <FavoriteIcon/>
                   </IconButton>
                   <IconButton aria-label="share">
-                    <ShareIcon />
+                    <ShareIcon/>
                   </IconButton>
                 </CardActions>
               </Card>

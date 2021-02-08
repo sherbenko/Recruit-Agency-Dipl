@@ -25,16 +25,16 @@ const SignInDialog = ({isOpen, toggleModal}) => {
           type={"password"}
           fullWidth
         /> </DialogContent>
-      <Grid container className={"modalActions"} >
+      <Grid container className={"modalActions"}>
         <Grid item className={'actionButton'}>
           <Button variant="contained" color="secondary">
             Submit
           </Button>
         </Grid>
         <Grid item className={'actionButton'}>
-        <Button variant="contained" color="primary" onClick={toggleModal}>
-          Cancel
-        </Button>
+          <Button variant="contained" color="primary" onClick={toggleModal}>
+            Cancel
+          </Button>
         </Grid>
       </Grid>
     </Dialog>

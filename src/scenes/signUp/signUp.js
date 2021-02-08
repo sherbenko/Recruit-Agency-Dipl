@@ -10,7 +10,7 @@ import Paper from '@material-ui/core/Paper';
 import Grid from '@material-ui/core/Grid';
 import LockOutlinedIcon from '@material-ui/icons/LockOutlined';
 import Typography from '@material-ui/core/Typography';
-import { makeStyles } from '@material-ui/core/styles';
+import {makeStyles} from '@material-ui/core/styles';
 import {Box} from "@material-ui/core";
 import {Copyright} from "@material-ui/icons";
 
@@ -48,12 +48,12 @@ const SignUp = () => {
   const classes = useStyles();
   return (
     <Grid container component="main" className={classes.root}>
-      <CssBaseline />
-      <Grid item xs={false} sm={4} md={7} className={classes.image} />
+      <CssBaseline/>
+      <Grid item xs={false} sm={4} md={7} className={classes.image}/>
       <Grid item xs={12} sm={8} md={5} component={Paper} elevation={6} square>
         <div className={classes.paper}>
           <Avatar className={classes.avatar}>
-            <LockOutlinedIcon />
+            <LockOutlinedIcon/>
           </Avatar>
           <Typography component="h1" variant="h5">
             Sign in
@@ -82,7 +82,7 @@ const SignUp = () => {
               autoComplete="current-password"
             />
             <FormControlLabel
-              control={<Checkbox value="remember" color="primary" />}
+              control={<Checkbox value="remember" color="primary"/>}
               label="Remember me"
             />
             <Button
@@ -107,7 +107,7 @@ const SignUp = () => {
               </Grid>
             </Grid>
             <Box mt={5}>
-              <Copyright />
+              <Copyright/>
             </Box>
           </form>
         </div>
