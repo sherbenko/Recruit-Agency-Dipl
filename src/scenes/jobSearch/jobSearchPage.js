@@ -1,9 +1,11 @@
 import React, {useState} from 'react'
 import {makeStyles} from "@material-ui/core";
 import Button from "@material-ui/core/Button";
-import SearchForm from "./searchForm";
+
 import InfoPanel from "./infoPanel/infoPanel";
+import SearchForm from "./searchForm/searchForm";
 import JobListing from "./jobListing/jobListing";
+import Grid from "@material-ui/core/Grid";
 
 const useStyles = makeStyles((theme) => ({
   infoPanel: {
@@ -29,10 +31,22 @@ const useStyles = makeStyles((theme) => ({
   },
   infoPanelActions: {
     paddingRight: '20px'
+  },
+  test: {
+
+    display: 'flex',
+    [theme.breakpoints.up('sm')]: {
+      display: 'none'
+    },
+    // justifyContent: 'center',
+  },
+  but:{
+    flex:'1'
   }
+
 }))
 
-const JobSearch = () => {
+const JobSearchPage = () => {
   const classes = useStyles();
   const [isOpenAllJobs, setIsOpenAllJobs] = useState(false);
   const toggleAllJobs = () => {
@@ -48,6 +62,11 @@ const JobSearch = () => {
       }
       {isOpenAllJobs &&
       <>
+        <Grid item  className={classes.test}>
+          <Button variant="contained" color="primary" className={classes.but}>
+            <span>REMOVE ALL FILTERS</span>
+          </Button>
+        </Grid>
         <InfoPanel/>
         <JobListing/>
       </>
@@ -56,4 +75,4 @@ const JobSearch = () => {
     </>
   )
 }
-export default JobSearch
+export default JobSearchPage

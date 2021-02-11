@@ -1,0 +1,26 @@
+.quill {
+    width: 600px;
+}
+
+@media screen and (max-width: 635px) {
+    .quill {
+        width: 400px;
+    }
+}
+
+@media screen and (max-width: 635px) {
+    .quill {
+        width: 400px;
+    }
+}
+
+@media screen and (max-width: 425px) {
+    .quill {
+        width: 350px;
+    }
+}
+@media screen and (max-width: 365px) {
+    .quill {
+        width: 300px;
+    }
+}

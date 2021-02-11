@@ -1,9 +1,7 @@
 import React from 'react';
-import {Button, CardActions, Grid, Link, makeStyles} from "@material-ui/core";
-import Typography from "@material-ui/core/Typography";
-import MailOutlineOutlinedIcon from '@material-ui/icons/MailOutlineOutlined';
-import BookmarkBorderIcon from '@material-ui/icons/BookmarkBorder';
-import VisibilityOutlinedIcon from '@material-ui/icons/VisibilityOutlined';
+import {Button, Grid, makeStyles} from "@material-ui/core";
+import JobListingCard from "./jobListingCard/jobListingCard";
+import JobListingFilterSection from "./jobListingFilter/jobListingFilterSection";
 
 const useStyles = makeStyles((theme) => ({
   jobListingContainer: {
@@ -11,43 +9,31 @@ const useStyles = makeStyles((theme) => ({
     flexWrap: 'wrap'
   },
 
-  jobNameTitle: {
-    color: '#30acff',
-    fontSize: '24px',
-    fontWeight: '500',
-  },
-  organizationNameTitle: {
-    color: '#30acff',
-    fontSize: '19px',
-    fontWeight: '500',
-  },
-  jobDescription: {
-    fontFamily: 'franklin-gothic-urw-cond, Helvetica, Arial, sans-serif',
-    [theme.breakpoints.down('sm')]: {
-      display: 'none'
-    },
-  },
-  jobItem: {
-    borderBottom: '1px solid #eee',
-    padding: '12px 0 12px 0'
-  },
-  cardActions: {
-    paddingTop: '10px'
-  },
-  orgNameAndHours: {
-    display: 'flex',
-    justifyContent: 'space-between'
-  },
-  hour: {
-    fontStyle: ' italic'
-  },
   /*fix*/
   menuContainer: {
     display: 'none',
     [theme.breakpoints.up('sm')]: {
       display: 'block'
     },
-  }
+
+  },
+  filterMenuTitle: {
+    fontSize: '15px',
+    fontFamily: 'franklin-gothic-urw-cond, Helvetica ,Arial sans-serif',
+    margin: '14px 0',
+    paddingLeft: '16px'
+  },
+  removeFilterButton: {
+    margin: '0 16px 14px 16px'
+  },
+  removeFilterButtonTitle: {},
+  filterHeader: {
+    borderBottom: '1px solid #eee'
+  },
+  jobCardsContainer: {
+    paddingLeft: '16px'
+  },
+
 }))
 const jobs = [
   {
@@ -91,7 +77,7 @@ const jobs = [
     passedHours: 9,
     location: 'Florence, SC',
     description: 'ADP is hiring an Account Manager II. The Account Manager II is responsible for developing partnerships with assigned clients to ensure long-term, successful relationships for ADP by supporting and managing client expectations. The Account Manager ...'
-  }, ,
+  },
   {
     id: 6,
     name: 'Package Handler III',
@@ -102,44 +88,38 @@ const jobs = [
   },
 
 ]
+const organizations = [
+  {id: 1, name: 'Accenture', numOfJobs: 2312},
+  {id: 2, name: 'Accenture', numOfJobs: 2312},
+  {id: 3, name: 'The Home Depot', numOfJobs: 2312},
+  {id: 4, name: 'Accenture', numOfJobs: 2312},
+  {id: 5, name: 'The Home Depot', numOfJobs: 2312},
+  {id: 6, name: 'Accenture', numOfJobs: 2312},
+  {id: 7, name: 'Accenture1', numOfJobs: 2312},
+  {id: 8, name: 'Accenture2', numOfJobs: 2312},
+  {id: 9, name: 'Accenture3', numOfJobs: 2312},
+
+]
 const JobListing = () => {
   const classes = useStyles();
   return (
     <div className={classes.jobListingContainer}>
       <Grid item xs={12} sm={3} md={3} className={classes.menuContainer}>
-        Menu
+        <div className={classes.filterHeader}>
+          <h4 className={classes.filterMenuTitle}> Refine your search </h4>
+
+          <Button variant="contained" color="primary" className={classes.removeFilterButton}>
+            <span className={classes.removeFilterButtonTitle}>REMOVE ALL FILTERS</span>
+          </Button>
+        </div>
+        <JobListingFilterSection items={organizations} sectionName={'Organization'}/>
+        <JobListingFilterSection items={organizations} sectionName={'Country'}/>
+        <JobListingFilterSection items={organizations} sectionName={'City'}/>
       </Grid>
-      <Grid item xs={12} sm={9} md={9}>
+      <Grid item xs={12} sm={9} md={9} className={classes.jobCardsContainer}>
         {
           jobs.map((job) => (
-            <div className={classes.jobItem} key={job.id}>
-              <Typography variant="h4" component="h2">
-                <Link href="#" className={classes.jobNameTitle}>
-                  {job.name}
-                </Link>
-              </Typography>
-              <div className={classes.orgNameAndHours}>
-                <Typography variant="h6" component="h2">
-                  <Link href="#" className={classes.organizationNameTitle}>
-                    {job.organization}
-                  </Link>
-                </Typography>
-                <Typography color="textSecondary" className={classes.hour}>
-                  {job.passedHours}h
-                </Typography>
-              </div>
-              <Typography color="textSecondary">
-                {job.location}
-              </Typography>
-              <Typography variant="body2" component="p" className={classes.jobDescription}>
-                {job.description}
-              </Typography>
-              <CardActions className={classes.cardActions}>
-                <Button><BookmarkBorderIcon/>SAVE</Button>
-                <Button><VisibilityOutlinedIcon/>HIDE</Button>
-                <Button><MailOutlineOutlinedIcon/>EMAIL</Button>
-              </CardActions>
-            </div>
+            <JobListingCard job={job}/>
 
           ))
         }

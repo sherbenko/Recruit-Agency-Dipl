@@ -7,8 +7,10 @@ import SignInDialog from "../signInDialog/singInDialog";
 import EmployeePage from "../employee/employeePage";
 import {withRouter} from 'react-router-dom';
 import SideBar from "./sidebar/sideBar";
-import JobSearch from "../jobSearch/jobSearch";
+import JobSearchPage from "../jobSearch/jobSearchPage";
 import {makeStyles} from "@material-ui/core";
+import JobPage from "../jobPage/jobPage";
+import OrganizationProfile from "../organizationProfile/organizationProfile";
 
 const useStyles = makeStyles((theme) => ({
   wrapper: {
@@ -20,7 +22,7 @@ const useStyles = makeStyles((theme) => ({
       padding: '5px 7px 5px'
     },
     [theme.breakpoints.between('xs', 'sm')]: {
-      width: '95%',
+      width: '99%',
       padding: '5px 0px 5px'
     },
   }
@@ -50,8 +52,10 @@ function App() {
         <div className={classes.wrapper}>
 
           <Route exact path="/candidate-profile" render={props => <EmployeePage {...props} />}/>
+          <Route exact path="/organization-profile" render={props => <OrganizationProfile {...props} />}/>
           <Route exact path="/signup" render={props => <SignUp {...props} />}/>
-          <Route exact path="/jobs" render={props => <JobSearch {...props} />}/>
+          <Route exact path="/jobs" render={props => <JobSearchPage {...props} />}/>
+          <Route exact path="/job" render={props => <JobPage {...props} />}/>
         </div>
 
       </Switch>

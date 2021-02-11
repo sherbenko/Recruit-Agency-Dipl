@@ -41,6 +41,14 @@ const SideBar = ({isSidebarOpen, toggleSidebarOpen}) => {
             <ListItemText primary={"My Profile"}/>
           </ListItem>
         </Link>
+        <Link to="/organization-profile" className={classes.link} onClick={toggleSidebarOpen}>
+          <ListItem button>
+            <ListItemIcon>
+              <PersonIcon/>
+            </ListItemIcon>
+            <ListItemText primary={"Organization Profile"}/>
+          </ListItem>
+        </Link>
         <Link to="/jobs" className={classes.link} onClick={toggleSidebarOpen}>
           <ListItem button>
             <ListItemIcon>
@@ -50,6 +58,14 @@ const SideBar = ({isSidebarOpen, toggleSidebarOpen}) => {
           </ListItem>
         </Link>
 
+        <Link to="/job" className={classes.link} onClick={toggleSidebarOpen}>
+          <ListItem button>
+            <ListItemIcon>
+              <SearchIcon/>
+            </ListItemIcon>
+            <ListItemText primary={"Job Page"}/>
+          </ListItem>
+        </Link>
         <Link to="/" className={classes.link} onClick={toggleSidebarOpen}>
           <ListItem button>
             <ListItemIcon>
