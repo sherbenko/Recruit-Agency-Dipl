@@ -1,21 +1,22 @@
 import React from 'react'
 import Avatar from "@material-ui/core/Avatar";
 import {Link, makeStyles, Paper} from "@material-ui/core";
+
 const useStyles = makeStyles((theme) => ({
 
-organizationDescriptionContainer: {
-  marginLeft: '10px',
+  organizationDescriptionContainer: {
+    marginLeft: '10px',
     minHeight: '210px',
     width: '100%',
     // display: 'flex',
     textAlign: 'center',
     flexWrap: 'wrap',
     '@media (max-width:960px)': {
-    marginLeft: '0px',
+      marginLeft: '0px',
       marginTop: '10px'
-  },
+    },
 
-},
+  },
   organizationLogo: {
     width: '250px',
     height: '250px',
@@ -29,14 +30,17 @@ organizationDescriptionContainer: {
   },
   jobNameTitle: {
     color: '#30acff',
-    fontSize: '24px',
     fontWeight: '500',
-    fontFamily: 'franklin-gothic-urw-cond, Helvetica, Arial, sans-serif',
+    fontSize: '28px',
+    fontFamily: 'Oswald, sans-serif',
     marginLeft: '0px',
   },
   aboutOrganization: {
     padding: '30px 15px 30px',
-    textAlign: 'left'
+    textAlign: 'left',
+    fontSize: '17px',
+    fontWeight: '400',
+    fontFamily: 'Oswald, sans-serif'
   },
   organizationLink: {
     color: '#30acff',
@@ -49,7 +53,7 @@ organizationDescriptionContainer: {
 const JobPageOrganizationCard = () => {
   const classes = useStyles();
 
-  return(
+  return (
     <Paper elevation={3} className={classes.organizationDescriptionContainer}>
       {/*<strong className={classes.jobOrganizationTitle}>Contact Information</strong>*/}
       <Avatar alt="Remy Sharp" variant="square" src="https://source.unsplash.com/random"

@@ -14,16 +14,18 @@ const useStyles = makeStyles((theme) => ({
     justifyContent: 'space-between'
   },
   jobTitle: {
-    fontFamily: 'alternate-gothic-no-3-d, sans-serif',
+    fontFamily: 'Oswald, sans-serif',
     fontSize: '28px',
-    paddingBottom: '10px'
-    // fontWeight: '100',
+    paddingBottom: '10px',
+     fontWeight: '400',
 
   },
   jobOrganizationTitle: {
     marginTop: '10px',
-    fontSize: '15px',
-    fontFamily: 'franklin-gothic-urw-cond, Helvetica, Arial, sans-serif',
+    fontSize: '20px',
+    fontWeight: '100',
+
+    fontFamily: 'Oswald, sans-serif',
     color: 'darkgrey'
   },
   applyButton: {

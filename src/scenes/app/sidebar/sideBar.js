@@ -66,6 +66,14 @@ const SideBar = ({isSidebarOpen, toggleSidebarOpen}) => {
             <ListItemText primary={"Job Page"}/>
           </ListItem>
         </Link>
+        <Link to="/applied-jobs" className={classes.link} onClick={toggleSidebarOpen}>
+          <ListItem button>
+            <ListItemIcon>
+              <InfoIcon/>
+            </ListItemIcon>
+            <ListItemText primary={"Applied Jobs"}/>
+          </ListItem>
+        </Link>
         <Link to="/" className={classes.link} onClick={toggleSidebarOpen}>
           <ListItem button>
             <ListItemIcon>

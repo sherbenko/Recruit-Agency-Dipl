@@ -11,6 +11,7 @@ import JobSearchPage from "../jobSearch/jobSearchPage";
 import {makeStyles} from "@material-ui/core";
 import JobPage from "../jobPage/jobPage";
 import OrganizationProfile from "../organizationProfile/organizationProfile";
+import AppliedJobsPage from "../appliedJobsPage/appliedJobsPage";
 
 const useStyles = makeStyles((theme) => ({
   wrapper: {
@@ -56,6 +57,8 @@ function App() {
           <Route exact path="/signup" render={props => <SignUp {...props} />}/>
           <Route exact path="/jobs" render={props => <JobSearchPage {...props} />}/>
           <Route exact path="/job" render={props => <JobPage {...props} />}/>
+          <Route exact path="/applied-jobs" render={props => <AppliedJobsPage {...props} />}/>
+
         </div>
 
       </Switch>

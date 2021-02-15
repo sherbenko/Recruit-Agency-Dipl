@@ -10,26 +10,30 @@ const useStyles = makeStyles((theme) => ({
 
   benefitsTitle: {
     fontSize: '17px',
-    fontFamily: 'franklin-gothic-urw-cond, Helvetica, Arial, sans-serif'
+    fontFamily: 'Oswald, sans-serif',
+    marginBottom:'10px'
   },
   jobFunctionDescription: {
     marginTop: '30px',
     fontSize: '17px',
-    fontFamily: 'franklin-gothic-urw-cond, Helvetica, Arial, sans-serif'
-
+    fontWeight: '400',
+    fontFamily: 'Oswald, sans-serif'
   },
   jobRequirementsDescription: {
     marginTop: '30px',
-    fontFamily: 'franklin-gothic-urw-cond, Helvetica, Arial, sans-serif'
+    fontWeight: '400',
+    fontFamily: 'Oswald, sans-serif'
   },
   jobBenefitsDescription: {
     marginTop: '30px',
-    fontFamily: 'franklin-gothic-urw-cond, Helvetica, Arial, sans-serif'
+    fontSize:'17px',
+    fontWeight: '400',
+    fontFamily: 'Oswald, sans-serif'
   },
   organizationDescription: {
     paddingTop: '10px',
-    fontFamily: 'franklin-gothic-urw-cond, Helvetica, Arial, sans-serif'
-  },
+    fontWeight: '400',
+    fontFamily: 'Oswald, sans-serif'  },
 }))
 
 const JobPageJobDescriptionCard = ({job}) => {

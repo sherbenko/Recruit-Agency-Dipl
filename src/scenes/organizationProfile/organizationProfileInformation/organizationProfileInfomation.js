@@ -1,6 +1,6 @@
 import React from "react";
 import Typography from "@material-ui/core/Typography";
-import {Checkbox, FormControlLabel, Grid, makeStyles, Paper, TextField} from "@material-ui/core";
+import {Grid, makeStyles, Paper, TextField} from "@material-ui/core";
 import HtmlEditor from "../../../utills/htmlEditor/htmlEditor";
 const useStyles = makeStyles((theme) => ({
 
@@ -14,7 +14,6 @@ const useStyles = makeStyles((theme) => ({
   textInput: {
     margin: '10px',
   },
-
   sectionName: {
     paddingTop: '20px'
   },
@@ -65,7 +64,7 @@ const OrganizationProfileInformation = () => {
           <Grid item xs={12} sm={3} md={3} className={classes.textInput}>
             <TextField fullWidth required id="email" type="email" label="email" defaultValue="ilyaSherbenko@mail.ru"/>
           </Grid>
-          <Grid item xs={12} sm={4} md={3} className={classes.textInput}>
+          <Grid item xs={12} sm={3} md={3} className={classes.textInput}>
             <TextField fullWidth required label="country" defaultValue="Belarus"/>
           </Grid>
           <Grid item xs={12} sm={4} md={5} className={classes.textInput}>
