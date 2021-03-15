@@ -44,7 +44,7 @@ const JobListingCard = ({job}) => {
     <div className={classes.jobItem} key={job.id}>
       <Typography variant="h4" component="h2">
         <Link href="#" className={classes.jobNameTitle}>
-          {job.name}
+          {job.jobName}
         </Link>
       </Typography>
       <div className={classes.orgNameAndHours}>
@@ -58,7 +58,10 @@ const JobListingCard = ({job}) => {
         </Typography>
       </div>
       <Typography color="textSecondary">
-        {job.location}
+        {job.country}
+      </Typography>
+      <Typography color="textSecondary">
+        {job.city}
       </Typography>
       <Typography variant="body2" component="p" className={classes.jobDescription}>
         {job.description}

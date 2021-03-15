@@ -1,7 +1,8 @@
 import React from 'react'
 import {Grid, makeStyles, Paper, TextField} from "@material-ui/core";
 import Button from "@material-ui/core/Button";
-
+import {useDispatch, useSelector} from "react-redux";
+import {handleKeyword, handleLocation} from "../../../services/searchJob/searchJobActions";
 const useStyles = makeStyles((theme) => ({
   searchContainer: {
     display: 'flex',
@@ -28,19 +29,29 @@ const useStyles = makeStyles((theme) => ({
   }
 
 }))
-const SearchForm = () => {
+const SearchForm = ({getDataNew}) => {
 
   const classes = useStyles();
+  const inputsValue = useSelector(state => state.searchJob);
+  const dispatch = useDispatch()
+  console.log(inputsValue)
+
+  const handleTextFieldKeyWord = (e) => {
+    dispatch(handleKeyword(e.target.value))
+  }
+  const handleTextFieldLocation = (e) => {
+    dispatch(handleLocation(e.target.value))
+  }
   return (
     <form>
       <Paper className={classes.searchContainer}>
         <Grid item xs={12} sm={4} md={4} className={classes.searchInput}>
-          <TextField fullWidth required label="Key Words"/>
+          <TextField value={inputsValue.keyword} fullWidth required label="Key Words" onChange={handleTextFieldKeyWord}/>
         </Grid>
         <Grid item xs={12} sm={4} md={4} className={classes.searchInput}>
-          <TextField fullWidth required label="Location"/>
+          <TextField value={inputsValue.location} fullWidth required label="Location" onChange={handleTextFieldLocation}/>
         </Grid>
-        <Button variant="contained" color="primary" className={classes.searchButton}>
+        <Button variant="contained" color="primary" className={classes.searchButton} onClick={getDataNew}>
           Search
         </Button>
 

@@ -1,0 +1,2 @@
+export const HANDLE_KEYWORD = 'HANDLE_KEYWORD';
+export const HANDLE_LOCATION = 'HANDLE_LOCATION';
